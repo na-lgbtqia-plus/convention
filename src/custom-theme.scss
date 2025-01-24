@@ -1,0 +1,44 @@
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use "@angular/material" as mat;
+@use "../theme-colors" as convention-theme;
+
+$background-color: #040239;
+
+html {
+  @include mat.theme(
+    (
+      color: (
+        theme-type: light,
+        primary: convention-theme.$primary-palette,
+        tertiary: convention-theme.$tertiary-palette,
+      ),
+      typography: Roboto,
+      density: 0,
+    )
+  );
+}
+html,
+body {
+  height: 100%;
+  overflow-y: auto;
+}
+body {
+  margin: 0;
+  font-family: "League Spartan", sans-serif;
+  color: white;
+  background-color: $background-color;
+  @include mat.fab-overrides(
+    (
+      extended-label-text-size: 20px,
+      container-color: var(--mat-sys-surface-container-high)
+    )
+  );
+}
+.contact-bar {
+  @include mat.icon-button-overrides(
+    (
+      icon-color: white
+    )
+  );
+}
