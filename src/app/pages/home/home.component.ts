@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { ContactBarComponent } from '../../components/contact-bar/contact-bar.component';
+import { NgOptimizedImage } from '@angular/common';
 
 @Component({
   selector: 'app-home',
-  imports: [ContactBarComponent],
+  imports: [ContactBarComponent, NgOptimizedImage],
   templateUrl: './home.component.html',
   styleUrl: './home.component.sass'
 })
