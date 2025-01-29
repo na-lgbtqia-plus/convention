@@ -1,0 +1,29 @@
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+import { Directive, ElementRef } from '@angular/core';
+
+@Directive({
+  selector: '[responsive]',
+})
+export class ResponsiveDirective {
+  constructor(
+    private element: ElementRef,
+    private breakpointObserver: BreakpointObserver
+  ) {
+    this.breakpointObserver
+      .observe([Breakpoints.TabletLandscape, Breakpoints.WebLandscape])
+      .subscribe({
+        next: (result: any) => {
+          const breakpoints = result.breakpoints;
+
+          // if (breakpoints[Breakpoints.HandsetPortrait]) {
+          if (breakpoints[Breakpoints.TabletLandscape]) {
+            console.log('screens matches HandsetPortrait');
+            this.element.nativeElement.classList.add('mobile');
+          } else if (breakpoints[Breakpoints.WebLandscape]) {
+            console.log('screens matches WebLandscape');
+            this.element.nativeElement.classList.remove('mobile');
+          }
+        },
+      });
+  }
+}
