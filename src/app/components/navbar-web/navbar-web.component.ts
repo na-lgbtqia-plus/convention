@@ -6,9 +6,8 @@ import { ResponsiveDirective } from '../../directives/responsive.directive';
 
 @Component({
   selector: 'app-navbar-web',
-  imports: [MatButtonModule, MatIconModule, RouterLink, RouterLinkActive],
+  imports: [MatButtonModule, MatIconModule, RouterLink, RouterLinkActive, ResponsiveDirective],
   templateUrl: './navbar-web.component.html',
-  styleUrl: './navbar-web.component.sass',
-  hostDirectives: [ResponsiveDirective]
+  styleUrl: './navbar-web.component.scss',
 })
 export class NavbarWebComponent {}

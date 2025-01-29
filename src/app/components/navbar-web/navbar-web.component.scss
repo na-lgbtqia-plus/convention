@@ -1,0 +1,37 @@
+
+@use "@angular/material" as mat;
+
+.navbar {
+  position: fixed;
+  bottom: 40px;
+  width: 70%;
+  background-color: var(--mat-sys-inverse-primary);
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  z-index: 1000;
+  left: 50%;
+  transform: translateX(-50%);
+
+  @include mat.fab-overrides(
+    (
+      extended-label-text-size: 20px,
+      container-color: var(--mat-sys-surface-container-high),
+    )
+  );
+}
+
+.tablet {
+  flex-direction: column;
+  left: 0%;
+  top: 50%;
+  transform: translateY(-50%);
+  bottom: 0px;
+  left: 20px;
+  width: 200px;
+}
+
+.mobile {
+  display: none;
+}

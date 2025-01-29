@@ -10,8 +10,7 @@ import { ResponsiveDirective } from './directives/responsive.directive';
   selector: 'app-root',
   imports: [RouterOutlet, NavbarWebComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.sass',
-  hostDirectives: [ResponsiveDirective],
+  styleUrl: './app.component.sass'
 })
 export class AppComponent {
   constructor(iconRegistry: MatIconRegistry, sanitizer: DomSanitizer) {
