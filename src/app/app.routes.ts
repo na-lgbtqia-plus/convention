@@ -7,7 +7,8 @@ import { ActivitiesComponent } from './pages/activities/activities.component';
 export const routes: Routes = [ {
   path: '', 
   component: HomeComponent,
-  title : 'Home: 1st European LGBTQIA+ Convention of Narcotics Anonymous'
+  title : 'Home: 1st European LGBTQIA+ Convention of Narcotics Anonymous',
+  data: { isHomepage: true } 
 },
 {
   path: 'accomodation', 

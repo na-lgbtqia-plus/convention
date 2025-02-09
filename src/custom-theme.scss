@@ -29,13 +29,14 @@ body {
   color: white;
   background-color: $background-color;
 }
-.contact-bar, .main-container {
+.contact-bar-container {
   @include mat.icon-button-overrides(
     (
       icon-color: white
     )
   );
 }
+
 
 @font-face {
   font-family: Heading;

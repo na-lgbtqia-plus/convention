@@ -2,14 +2,39 @@
 @use "@angular/material" as mat
 
 $background-color: #040239
-  
-.main-container
+
+.drawer-container
   height: 100vh
   width: 100%
   display: flex
   flex-direction: column
   background-color: $background-color
   color: white
+
+.full-drawer
+  background-color: var(--mat-sys-inverse-primary)
+
+.full-drawer.web, .full-drawer.tablet
+  display: none
+
+.app-bars-web
+  position: sticky
+  top: 0
+  padding: 5px 0 10px 0
+  background-color: $background-color
+  z-index: 1000
+
+.app-bars-web.mobile
+  display: none
+
+.title-bar-mobile.web, .title-bar-mobile.tablet
+  display: none
+
+.title-bar-web.inactive
+  display: none
+
+.title-bar-mobile.inactive
+  display: none
 
 .burger
   position: fixed
@@ -18,10 +43,5 @@ $background-color: #040239
   bottom: 30px
   background-color: var(--mat-sys-primary)
 
-.full-drawer
-  background-color: var(--mat-sys-inverse-primary)
-
-.web 
-  display: none
-.tablet
+.burger.web, .burger.tablet
   display: none
