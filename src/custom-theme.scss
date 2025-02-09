@@ -29,7 +29,7 @@ body {
   color: white;
   background-color: $background-color;
 }
-.contact-bar, .navbar-mobile {
+.contact-bar, .main-container {
   @include mat.icon-button-overrides(
     (
       icon-color: white

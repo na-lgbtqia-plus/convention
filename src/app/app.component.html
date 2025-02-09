@@ -1,10 +1,14 @@
-<mat-drawer-container [hasBackdrop]="true">
-  <app-navbar-mobile #navbarMobile></app-navbar-mobile>
+<mat-drawer-container>
+  <mat-drawer class="full-drawer" #drawer mode="over" position="end" appResponsive>
+    <app-navbar-mobile [drawer]="drawer"></app-navbar-mobile>
+  </mat-drawer>
+  <mat-drawer-content>
   <div class="main-container">
-    <router-outlet></router-outlet>
-    <button class="burger" mat-icon-button (click)="toggleDrawer()">
+    <button class="burger" mat-icon-button (click)="drawer.toggle()" appResponsive>
       <mat-icon>menu</mat-icon>
     </button>
+    <router-outlet></router-outlet>
     <app-navbar-web></app-navbar-web>
   </div>
+</mat-drawer-content>
 </mat-drawer-container>
