@@ -9,7 +9,7 @@ import { ContactBarComponent } from "../contact-bar/contact-bar.component";
 
 @Component({
   selector: 'app-navbar-mobile',
-  imports: [ContactBarComponent, MatSidenavModule, MatButtonModule, MatIconModule, RouterLink, RouterLinkActive, ResponsiveDirective, ContactBarComponent],
+  imports: [ContactBarComponent, MatSidenavModule, MatButtonModule, MatIconModule, RouterLink, RouterLinkActive, ContactBarComponent],
   templateUrl: './navbar-mobile.component.html',
   styleUrl: './navbar-mobile.component.sass'
 })
