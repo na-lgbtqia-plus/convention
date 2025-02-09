@@ -23,9 +23,11 @@ export class ResponsiveDirective {
           if (breakpoints[Breakpoints.TabletLandscape]) {
             console.log('screens matches TabletLandscape');
             this.element.nativeElement.classList.remove('mobile');
+            this.element.nativeElement.classList.remove('web');
             this.element.nativeElement.classList.add('tablet');
           } else if (breakpoints[Breakpoints.WebLandscape]) {
             console.log('screens matches WebLandscape');
+            this.element.nativeElement.classList.add('web')
             this.element.nativeElement.classList.remove('tablet');
           }
         },

@@ -1,13 +1,19 @@
 <app-contact-bar [isHomepage]="true"></app-contact-bar>
-<div class="home">
+<div class="home" appResponsive>
+
   <div class="content">
-    <img ngSrc="logo.svg" alt="convention logo" width="180" height="180" priority />
-    <br>
-    <div class="title">
-      <div class="title-first"><span style="font-family:roboto; font-weight: bold">1</span><span>ST EUROPEAN LGBTQIA+</span></div>
-      <p>CONVENTION OF NARCOTICS ANONYMOUS</p>
-      <br>
+    <div class="logo">
+      <img class="logo" ngSrc="logo.svg" alt="convention logo" fill priority />
     </div>
-    <img ngSrc="olympia.svg" alt="convention logo" width="700" height="233" priority />
+    <div class="space"><br></div>
+    <div class="title">
+      <div class="title-first"><span style="font-family:roboto; font-weight: bold">1</span><span>ST EUROPEAN
+          LGBTQIA+</span></div>
+      <p>CONVENTION OF NARCOTICS ANONYMOUS</p>
+      <div class="space"><br></div>
+    </div>
+    <div class="olympia">
+      <img ngSrc="olympia.svg" alt="convention logo" fill priority />
+    </div>
   </div>
 </div>

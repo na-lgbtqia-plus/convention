@@ -5,7 +5,7 @@ import { ResponsiveDirective } from '../../directives/responsive.directive';
 
 @Component({
   selector: 'app-contact-bar',
-  imports: [MatIconModule, MatButtonModule, ResponsiveDirective],
+  imports: [MatIconModule, MatButtonModule],
   templateUrl: './contact-bar.component.html',
   styleUrl: './contact-bar.component.sass'
 })

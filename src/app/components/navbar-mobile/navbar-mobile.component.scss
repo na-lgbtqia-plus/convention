@@ -1,0 +1,14 @@
+.web, .tablet {
+  display: none;
+}
+
+.burger {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 30px;
+}
+
+.navbar-mobile button, a {
+    background-color: var(--mat-sys-primary)
+}

@@ -1,4 +1,10 @@
-<div class="main-container">
-  <router-outlet></router-outlet>  
-  <app-navbar-web></app-navbar-web>
-</div>
+<mat-drawer-container [hasBackdrop]="true">
+  <app-navbar-mobile #navbarMobile></app-navbar-mobile>
+  <div class="main-container">
+    <router-outlet></router-outlet>
+    <button class="burger" mat-icon-button (click)="toggleDrawer()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <app-navbar-web></app-navbar-web>
+  </div>
+</mat-drawer-container>

@@ -20,25 +20,24 @@ html {
 }
 html,
 body {
-  height: 100%;
   overflow-y: auto;
 }
 body {
+  height: 100vh;
   margin: 0;
   font-family: "League Spartan", sans-serif;
   color: white;
   background-color: $background-color;
-  @include mat.fab-overrides(
-    (
-      extended-label-text-size: 20px,
-      container-color: var(--mat-sys-surface-container-high)
-    )
-  );
 }
-.contact-bar {
+.contact-bar, .navbar-mobile {
   @include mat.icon-button-overrides(
     (
       icon-color: white
     )
   );
+}
+
+@font-face {
+  font-family: Heading;
+  src: url('assets/fonts/heading/HeadingNowTrial-64Regular.ttf') format('truetype');
 }
