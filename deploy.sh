@@ -1,0 +1,1 @@
+gcloud run deploy main-website --region europe-west9 --source .
