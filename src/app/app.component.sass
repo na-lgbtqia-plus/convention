@@ -24,16 +24,17 @@ $background-color: #040239
   background-color: $background-color
   z-index: 1000
 
-.app-bars-web.mobile
+.title-bar-mobile
+  position: sticky
+  top: 0
+  padding: 5px 0 10px 0
+  background-color: $background-color
+  z-index: 2000
+
+.app-bars-web.mobile,.title-bar-mobile.web, .title-bar-mobile.tablet
   display: none
 
-.title-bar-mobile.web, .title-bar-mobile.tablet
-  display: none
-
-.title-bar-web.inactive
-  display: none
-
-.title-bar-mobile.inactive
+.title-bar-web.inactive,.title-bar-mobile.inactive
   display: none
 
 .burger
@@ -41,7 +42,7 @@ $background-color: #040239
   left: 50%
   transform: translateX(-50%)
   bottom: 30px
-  background-color: var(--mat-sys-primary)
+  background-color: var(--mat-sys-inverse-primary)
 
 .burger.web, .burger.tablet
   display: none

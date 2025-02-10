@@ -22,14 +22,25 @@
   );
 }
 
+.web {
+  .nav-icon-tablet {
+    display: none;
+  }
+}
+
 .tablet {
-  flex-direction: column;
-  left: 0%;
-  top: 50%;
-  transform: translateY(-50%);
-  bottom: 0px;
-  left: 20px;
-  width: 200px;
+  // flex-direction: column;
+  // left: 0%;
+  // top: 50%;
+  // transform: translateY(-50%);
+  // bottom: 0px;
+  // left: 20px;
+  // width: 200px;
+   width: 50%;
+   padding: 10px 0px;
+  .nav-icon-web {
+    display: none
+  }
 }
 
 .mobile {
