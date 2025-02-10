@@ -5,7 +5,7 @@ import { ResponsiveDirective } from '../../directives/responsive.directive';
 
 @Component({
   selector: 'app-home',
-  imports: [ContactBarComponent, NgOptimizedImage, ResponsiveDirective],
+  imports: [NgOptimizedImage, ResponsiveDirective],
   templateUrl: './home.component.html',
   styleUrl: './home.component.sass'
 })

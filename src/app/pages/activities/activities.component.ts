@@ -4,7 +4,7 @@ import { TitleBarWebComponent } from '../../components/title-bar-web/title-bar-w
 
 @Component({
   selector: 'app-activities',
-  imports: [ContactBarComponent, TitleBarWebComponent],
+  imports: [],
   templateUrl: './activities.component.html',
   styleUrl: './activities.component.sass'
 })

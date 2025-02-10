@@ -4,7 +4,7 @@ import { TitleBarWebComponent } from '../../components/title-bar-web/title-bar-w
 
 @Component({
   selector: 'app-accomodation',
-  imports: [ContactBarComponent, TitleBarWebComponent],
+  imports: [],
   templateUrl: './accomodation.component.html',
   styleUrl: './accomodation.component.sass'
 })

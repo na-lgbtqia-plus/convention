@@ -4,7 +4,7 @@ import { TitleBarWebComponent } from '../../components/title-bar-web/title-bar-w
 
 @Component({
   selector: 'app-venue',
-  imports: [ContactBarComponent, TitleBarWebComponent],
+  imports: [],
   templateUrl: './venue.component.html',
   styleUrl: './venue.component.sass'
 })
