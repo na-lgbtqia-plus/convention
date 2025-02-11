@@ -1,10 +1,13 @@
 import { Component } from '@angular/core';
 import { ContactBarComponent } from '../../components/contact-bar/contact-bar.component';
 import { TitleBarWebComponent } from '../../components/title-bar-web/title-bar-web.component';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { ResponsiveDirective } from '../../directives/responsive.directive';
 
 @Component({
   selector: 'app-accomodation',
-  imports: [],
+  imports: [MatIconModule, MatButtonModule, ResponsiveDirective],
   templateUrl: './accomodation.component.html',
   styleUrl: './accomodation.component.sass'
 })

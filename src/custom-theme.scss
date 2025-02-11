@@ -41,3 +41,15 @@ body {
   font-family: Heading;
   src: url('assets/fonts/heading/HeadingNowTrial-64Regular.ttf') format('truetype');
 }
+
+.mobile h1 {
+  font-size: 30px;
+}
+
+.mobile h2 {
+    font-size: 25px;
+}
+
+.mobile p, span {
+  font-size: 16px;
+}
