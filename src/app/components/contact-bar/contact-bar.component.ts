@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { ResponsiveDirective } from '../../directives/responsive.directive';
@@ -12,4 +12,9 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
 })
 export class ContactBarComponent {
   @Input() isHomepage: boolean = false;
+  @Output() closeClicked = new EventEmitter<void>();
+
+  closeDrawer() {
+    this.closeClicked.emit();
+  }
 }

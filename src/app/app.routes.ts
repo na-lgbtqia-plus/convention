@@ -4,6 +4,7 @@ import { AccomodationComponent } from './pages/accomodation/accomodation.compone
 import { VenueComponent } from './pages/venue/venue.component';
 import { ActivitiesComponent } from './pages/activities/activities.component';
 import { ContactComponent } from './pages/contact/contact.component';
+import { AboutComponent } from './pages/about/about.component';
 
 export const routes: Routes = [ {
   path: '', 
@@ -30,4 +31,9 @@ export const routes: Routes = [ {
   path: 'contact', 
   component: ContactComponent,
   title : 'Contact: 1st European LGBTQIA+ Convention of Narcotics Anonymous'
+},
+{
+  path: 'about', 
+  component: AboutComponent,
+  title : 'About: 1st European LGBTQIA+ Convention of Narcotics Anonymous'
 }];

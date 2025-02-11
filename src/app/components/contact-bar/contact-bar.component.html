@@ -3,10 +3,10 @@
   <a mat-icon-button href="https://www.facebook.com/groups/1316095406234388/" target="_blank" alt="Facebook group" title="Facebook group">
     <mat-icon svgIcon="facebook"></mat-icon>
   </a>
-  <a mat-icon-button routerLink="contact"  routerLinkActive="active" alt="Get in touch!" title="Get in touch!">
+  <a mat-icon-button (click)="closeDrawer()" routerLink="contact"  routerLinkActive="active" alt="Get in touch!" title="Get in touch!">
     <mat-icon>email</mat-icon>
   </a>
-  <button mat-icon-button>
+  <button mat-icon-button (click)="closeDrawer()" routerLink="about"  routerLinkActive="active" alt="About us" title="About us">
     <mat-icon>question_mark</mat-icon>
   </button>
 </div>
