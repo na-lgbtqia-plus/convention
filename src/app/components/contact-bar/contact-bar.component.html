@@ -1,9 +1,9 @@
 <div class="contact-bar-container">
   <p [className]="isHomepage ? 'active' : 'inactive'">Join us on Facebook for the latest info >>></p>
-  <a mat-icon-button href="https://www.facebook.com/groups/1316095406234388/" target="_blank">
+  <a mat-icon-button href="https://www.facebook.com/groups/1316095406234388/" target="_blank" alt="Facebook group" title="Facebook group">
     <mat-icon svgIcon="facebook"></mat-icon>
   </a>
-  <a href="mailto:lgbtqiaplus@narcotiquesanonymes.org" mat-icon-button>
+  <a mat-icon-button routerLink="contact"  routerLinkActive="active" alt="Get in touch!" title="Get in touch!">
     <mat-icon>email</mat-icon>
   </a>
   <button mat-icon-button>

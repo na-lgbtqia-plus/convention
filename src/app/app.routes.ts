@@ -3,6 +3,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { AccomodationComponent } from './pages/accomodation/accomodation.component';
 import { VenueComponent } from './pages/venue/venue.component';
 import { ActivitiesComponent } from './pages/activities/activities.component';
+import { ContactComponent } from './pages/contact/contact.component';
 
 export const routes: Routes = [ {
   path: '', 
@@ -24,4 +25,9 @@ export const routes: Routes = [ {
   path: 'activities', 
   component: ActivitiesComponent,
   title : 'Activities: 1st European LGBTQIA+ Convention of Narcotics Anonymous'
+},
+{
+  path: 'contact', 
+  component: ContactComponent,
+  title : 'Contact: 1st European LGBTQIA+ Convention of Narcotics Anonymous'
 }];
