@@ -1,17 +1,17 @@
-<mat-drawer-container class="drawer-container">
-  <mat-drawer class="full-drawer" #drawer mode="over" position="end" appResponsive>
+<mat-drawer-container class="drawer-container" appResponsive>
+  <mat-drawer class="full-drawer" #drawer mode="over" position="end">
     <app-navbar-mobile [drawer]="drawer"></app-navbar-mobile>
   </mat-drawer>
   <mat-drawer-content class="drawer-content">
-    <div class="app-bars-web" appResponsive>
+    <div class="app-bars-web">
       <app-title-bar-web class="title-bar-web" [class.inactive]="isHomepage"
         [class.active]="!isHomepage"></app-title-bar-web>
-      <app-contact-bar class="contact-bar-web" appResponsive [isHomepage]="isHomepage"></app-contact-bar>
+      <app-contact-bar class="contact-bar-web" [isHomepage]="isHomepage"></app-contact-bar>
     </div>
     <app-title-bar-mobile class="title-bar-mobile" [class.inactive]="isHomepage"
-    [class.active]="!isHomepage" appResponsive></app-title-bar-mobile>
+    [class.active]="!isHomepage"></app-title-bar-mobile>
     <div class="main-container"><router-outlet></router-outlet></div>
-    <div class="burger"><button class="burger" mat-fab (click)="drawer.toggle()" appResponsive>
+    <div class="burger"><button class="burger" mat-fab (click)="drawer.toggle()">
         <mat-icon>menu</mat-icon>
       </button>
     </div>
