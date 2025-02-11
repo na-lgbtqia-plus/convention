@@ -19,6 +19,7 @@ export class ResponsiveDirective {
             console.log('screens matches HandsetPortrait');
             this.element.nativeElement.classList.add('mobile');
             this.element.nativeElement.classList.remove('tablet');
+            this.element.nativeElement.classList.remove('web');
           }
           if (breakpoints[Breakpoints.TabletLandscape]) {
             console.log('screens matches TabletLandscape');
@@ -28,6 +29,7 @@ export class ResponsiveDirective {
           } else if (breakpoints[Breakpoints.WebLandscape]) {
             console.log('screens matches WebLandscape');
             this.element.nativeElement.classList.add('web')
+            this.element.nativeElement.classList.remove('mobile');
             this.element.nativeElement.classList.remove('tablet');
           }
         },
