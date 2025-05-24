@@ -23,6 +23,10 @@
     <mat-icon>diversity_1</mat-icon>
     Activities
   </a>
+  <a mat-fab extended (click)="close()" routerLink="/food" routerLinkActive="active">
+    <mat-icon>local_dining</mat-icon>
+    Food
+  </a>
   <div class="mobile-contact">
     <p>Join us on Facebook for the latest info</p>
     <app-contact-bar (closeClicked)="close()"></app-contact-bar>
