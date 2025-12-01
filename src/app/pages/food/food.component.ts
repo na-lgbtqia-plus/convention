@@ -7,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrl: './food.component.sass'
 })
 export class FoodComponent {
+  language: 'en' | 'fr' = 'en';
 
+  setLanguage(lang: 'en' | 'fr') {
+    this.language = lang;
+  }
 }

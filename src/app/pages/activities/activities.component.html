@@ -1,29 +1,337 @@
 <div class="activities-container" appResponsive>
   <div class="activities-content">
-    <!-- <h2>Event Highlights:</h2> -->
     <div class="program">
-      <div class="image-container">
-        <div class="friday image">
-            <a href="program_friday.png" target="_blank" onclick="window.open(this.href, '_blank', 'width=500,height=893,resizable=yes'); return false;">
-            <img ngSrc="program_friday.png" alt="Friday program" fill priority />
-            </a>
-        </div>
+      <div class="language-switcher">
+        <button (click)="setLanguage('en')" [class.active]="language === 'en'">ENGLISH</button> |
+        <button (click)="setLanguage('fr')" [class.active]="language === 'fr'">FRANÇAIS</button>
       </div>
-      <div class="image-container">
-        <div class="saturday image">
-          <a href="program_saturday.png" target="_blank" onclick="window.open(this.href, '_blank', 'width=500,height=893,resizable=yes'); return false;">
-            <img ngSrc="program_saturday.png" alt="Saturday program" fill priority />
-          </a>
+      @if (language === 'en') {
+      <h3>Full program including schedule, locations and recommendations is out! Download it <a
+          href="official_program.pdf" target="_blank">here</a>.</h3>
+      <h3>ALL ACTIVITES HAPPEN AT THE <a href="https://maps.app.goo.gl/Ck5CHojEDjiqePPo9" target="_blank">CONVENTION
+          CENTER</a> UNLESS STATED OTHERWISE.</h3>
+      <h1>Friday Program</h1>
+      <section class="schedule-section">
+        <div class="event">
+          <span class="time">5:00 pm</span>
+          <span class="description">Registration</span>
         </div>
-      </div>
-      <div class="image-container">
-        <div class="sunday image">
-          <a href="program_sunday.png" target="_blank" onclick="window.open(this.href, '_blank', 'width=500,height=893,resizable=yes'); return false;">
-            <img ngSrc="program_sunday.png" alt="Sunday program" fill priority />
-          </a>
+        <div class="event">
+          <span class="time">6:30 pm</span>
+          <span class="description">Welcome Address & Program Information<br><small>Alex, Benjamin, Hugo
+            </small></span>
         </div>
-      </div>
+        <div class="event">
+          <span class="time">7:00 pm</span>
+          <span class="description">A Story of Growth: LGBTQIA+ Fellowship Development in France<br><small>Thomas, Em
+            </small></span>
+        </div>
+        <div class="event">
+          <span class="time">7:30 pm</span>
+          <span class="description">Opening Message: Tradition 1 — We Are Stronger Together – Unity in Our
+            Differences<br><small>Celita, Udo, Luci </small></span>
+        </div>
+        <div class="event">
+          <span class="time">9:00 pm</span>
+          <span class="description">Conference Center Closes</span>
+        </div>
+      </section>
+      <h1>Saturday Program</h1>
+
+      <section class="schedule-section">
+        <div class="event">
+          <span class="time">8:00 am – 9:00 am</span>
+          <span class="description">Rainbow Run</span>
+          <p class="location">(Meeting point at the Convention Center)</p>
+        </div>
+        <div class="event">
+          <span class="time">10:00 am – 11:00 am</span>
+          <span class="description">Yoga Serenity Flow</span>
+        </div>
+        <div class="event">
+          <span class="time">10:00 am – 12:00 pm</span>
+          <span class="description">Recovery Walk Through Paris</span>
+          <p class="location">(Meeting point at the Convention Center)</p>
+        </div>
+
+        <div class="event">
+          <span class="time">12:00 pm – 1:30 pm</span>
+          <span class="description">Luncheon at the Convention Center</span>
+        </div>
+        <div class="event">
+          <span class="time">1:30 pm – 2:00 pm</span>
+          <span class="description">Gathering for the Pride March to depart together from the convention center</span>
+        </div>
+
+        <div class="event">
+          <span class="time">2:00 pm – 6:00 pm</span>
+          <span class="description">NA at Paris Pride – NA Float</span>
+          <p class="location">The departure point is <a href="https://maps.app.goo.gl/Y2bJ65qjG7LKZArv5"
+              target="_blank">here</a>.</p>
+          <p class="location">The arrival point is <a href="https://maps.app.goo.gl/mNMDhGBB6yk4nFrG7"
+              target="_blank">here</a>.</p>
+        </div>
+        <div class="event">
+          <span class="time">2:00 pm – 6:00 pm</span>
+          <span class="description">Marathon Meetings</span>
+        </div>
+        <div class="event">
+          <span class="time">6:00 pm</span>
+          <span class="description">Conference Center Closes</span>
+        </div>
+
+        <div class="event">
+          <span class="time">7:45 pm</span>
+          <span class="description">Glitter on the Water – NA Night Cruise <em></em></span>
+          <p class="location">The departure point is <a href="https://maps.app.goo.gl/6ecaieJCtX5tT79z5"
+              target="_blank">here</a>. Don't be late!!! Boat leaves at 8.10pm.</p>
+          <p class="location">The arrival point is <a href="https://maps.app.goo.gl/FZdtair16AG84gbw8"
+              target="_blank">here</a>.</p>
+        </div>
+        <div class="event">
+          <span class="time">9:00 pm</span>
+          <span class="description">Conference Center Closes</span>
+        </div>
+      </section>
+
+      <h1>Sunday Program</h1>
+
+      <section class="schedule-section">
+        <div class="event">
+          <span class="time">8:00 am – 9:00 am</span>
+          <span class="description">Breakfast / Registration</span>
+        </div>
+        <div class="event">
+          <span class="time">9:00 am – 10:00 am</span>
+          <span class="description">1st Step: Breaking Diverse Barriers – Surrendering<br><small>Sekou, Penn,
+              Ewelina</small></span>
+        </div>
+        <div class="event">
+          <span class="time">10:00 am – 10:15 am</span>
+          <span class="description">Coffee Break</span>
+        </div>
+        <div class="event">
+          <span class="time">10:15 am – 11:15 am</span>
+          <span class="description">3rd Tradition: No One Is Excluded – Every Addict, Every Identity, Every
+            Story<br><small>Guido, Natasha, James</small></span>
+        </div>
+        <div class="event">
+          <span class="time">11:15 am – 11:30 am</span>
+          <span class="description">Coffee Break</span>
+        </div>
+        <div class="event">
+          <span class="time">11:30 am – 1:00 pm</span>
+          <span class="description">The Celebration of Our Diversity: Talent Show<br><small>Hosted by
+              Jazz</small></span>
+        </div>
+        <div class="event">
+          <span class="time">1:00 pm</span>
+          <span class="description">Luncheon at the Convention Center</span>
+        </div>
+        <div class="event">
+          <span class="time">2:30 pm</span>
+          <span class="description">Queer Sponsorship: Finding Support in NA & Giving It Back<br><small>Fabio, Suzanne,
+              Ibrahim</small></span>
+        </div>
+        <div class="event">
+          <span class="time">3:30 pm</span>
+          <span class="description">Coffee Break</span>
+        </div>
+        <div class="event">
+          <span class="time">3:45 pm</span>
+          <span class="description">Overcoming Shame with Step 4 & 5: Owning Our Truth – Honesty, Healing &
+            Self-Acceptance<br><small>Annick, Loic, Michelle</small></span>
+        </div>
+        <div class="event">
+          <span class="time">4:45 pm</span>
+          <span class="description">Coffee Break</span>
+        </div>
+        <div class="event">
+          <span class="time">5:00 pm</span>
+          <span class="description">Closing Meeting: Exploring Step 11 in Diversity – One Spirituality, Many
+            Practices<br><small>Marie, Zafira, Carlos</small></span>
+        </div>
+        <div class="event">
+          <span class="time">6:00 pm</span>
+          <span class="description">One Fellowship, Many Journeys – A Countdown of Unity in Diversity</span>
+        </div>
+        <div class="event">
+          <span class="time">7:00 pm</span>
+          <span class="description">Conference Center Closes</span>
+        </div>
+        <div class="event">
+          <span class="time">7:00 pm – 12:00 am</span>
+          <span class="description">Living Clean Party at Alcazar</span>
+          <p class="location"><a href="https://maps.app.goo.gl/HDyWE7sDHwGSYjcW9" target="_blank">62 Rue Mazarine, 75006
+              Paris</a></p>
+        </div>
+      </section>
+      }
+
+      <!-- French Version -->
+      @if (language === 'fr') {
+      <h3>Le programme complet incluant les horaires, les lieux et des recommandations est arrivé! Télécharge-le <a
+          href="official_program.pdf" target="_blank">ici</a>.</h3>
+      <h3>Toutes les activités se déroulent à <a href="https://maps.app.goo.gl/Ck5CHojEDjiqePPo9"
+          target="_blank">l'Espace Saint-Martin</a>, sauf indication contraire.</h3>
+
+      <h1>Programme du Vendredi</h1>
+      <section class="schedule-section">
+        <div class="event">
+          <span class="time">17h00</span>
+          <span class="description">Enregistrement</span>
+        </div>
+        <div class="event">
+          <span class="time">18h30</span>
+          <span class="description">Message de bienvenue & Informations sur le programme<br><small>Alex, Benjamin,
+              Hugo</small></span>
+        </div>
+        <div class="event">
+          <span class="time">19h00</span>
+          <span class="description">Le développement de la fraternité LGBTQIA+ en France<br><small>Thomas,
+              Em</small></span>
+        </div>
+        <div class="event">
+          <span class="time">19h30</span>
+          <span class="description">Message d’ouverture : Tradition 1 — Nous sommes plus forts ensemble – L’unité dans
+            nos différences<br><small>Celita Udo Luci </small></span>
+        </div>
+        <div class="event">
+          <span class="time">21h00</span>
+          <span class="description">Fermeture de l'Espace Saint-Martin Saint-Martin</span>
+        </div>
+      </section>
+
+      <h1>Programme du Samedi</h1>
+      <section class="schedule-section">
+        <div class="event">
+          <span class="time">8h00 – 9h00</span>
+          <span class="description">Rainbow Run</span>
+          <p class="location">(Point de rendez-vous : Espace Saint-Martin)</p>
+        </div>
+        <div class="event">
+          <span class="time">10h00 – 11h00</span>
+          <span class="description">Yoga Sérénité Flow</span>
+        </div>
+        <div class="event">
+          <span class="time">10h00 – 12h00</span>
+          <span class="description">Marche de Rétab à travers Paris</span>
+          <p class="location">(Point de rendez-vous : Espace Saint-Martin)</p>
+        </div>
+
+        <div class="event">
+          <span class="time">12h00 – 13h30</span>
+          <span class="description">Déjeuner à l'Espace Saint-Martin</span>
+        </div>
+        <div class="event">
+          <span class="time">13h30 – 14h00</span>
+          <span class="description">Départ pour la Marche des Fiertés</span>
+        </div>
+
+        <div class="event">
+          <span class="time">14h00 – 18h00</span>
+          <span class="description">NA à la Marche – Char NA</span>
+          <p class="location">Le point de départ est <a href="https://maps.app.goo.gl/Y2bJ65qjG7LKZArv5"
+              target="_blank">ici</a>.</p>
+          <p class="location">Le point d’arrivée est <a href="https://maps.app.goo.gl/mNMDhGBB6yk4nFrG7"
+              target="_blank">ici</a>.</p>
+        </div>
+        <div class="event">
+          <span class="time">14h00 – 18h00</span>
+          <span class="description">Réunions Marathon</span>
+        </div>
+
+        <div class="event">
+          <span class="time">19h45</span>
+          <span class="description">Croisière Nocturne NA <em>(COMPLET)</em></span>
+          <p class="location">Le point de départ est <a href="https://maps.app.goo.gl/6ecaieJCtX5tT79z5"
+              target="_blank">ici</a>. Ne sois pas en retard !!! Le bateau part à 20h10.</p>
+          <p class="location">Le point d’arrivée est <a href="https://maps.app.goo.gl/FZdtair16AG84gbw8"
+              target="_blank">ici</a>.</p>
+        </div>
+
+        <div class="event">
+          <span class="time">21h00</span>
+          <span class="description">Fermeture de l'Espace Saint-Martin Saint-Martin</span>
+        </div>
+      </section>
+
+      <h1>Programme du Dimanche</h1>
+      <section class="schedule-section">
+        <div class="event">
+          <span class="time">8h00 – 9h00</span>
+          <span class="description">Petit-déjeuner / Enregistrement</span>
+        </div>
+        <div class="event">
+          <span class="time">9h00 – 10h00</span>
+          <span class="description">1ère Étape : Briser nos barrières – Capituler<br><small>Sekou, Penn,
+              Ewelina</small></span>
+        </div>
+        <div class="event">
+          <span class="time">10h00 – 10h15</span>
+          <span class="description">Pause Café</span>
+        </div>
+        <div class="event">
+          <span class="time">10h15 – 11h15</span>
+          <span class="description">3ème Tradition : Personne n’est exclu – Chaque dépendant·e, chaque identité, chaque
+            histoire<br><small>Guido, Natasha, James</small></span>
+        </div>
+        <div class="event">
+          <span class="time">11h15 – 11h30</span>
+          <span class="description">Pause Café</span>
+        </div>
+        <div class="event">
+          <span class="time">11h30 – 13h00</span>
+          <span class="description">The Celebration of Our Diversity : Talent Show<br><small>Animé
+              par Jazz</small></span>
+        </div>
+        <div class="event">
+          <span class="time">13h00</span>
+          <span class="description">Déjeuner</span>
+        </div>
+        <div class="event">
+          <span class="time">14h30</span>
+          <span class="description">Parrainage : Trouver du soutien dans NA et le redonner<br><small>Fabio, Suzanne,
+              Ibrahim</small></span>
+        </div>
+        <div class="event">
+          <span class="time">15h30</span>
+          <span class="description">Pause Café</span>
+        </div>
+        <div class="event">
+          <span class="time">15h45</span>
+          <span class="description">Surmonter la honte avec les Étapes 4 et 5 : S’approprier sa vérité – Honnêteté,
+            acceptation<br><small>Annick, Loic, Michelle</small></span>
+        </div>
+        <div class="event">
+          <span class="time">16h45</span>
+          <span class="description">Pause Café</span>
+        </div>
+        <div class="event">
+          <span class="time">17h00</span>
+          <span class="description">Clôture : Explorer la 11e Étape dans la diversité – Une spiritualité, des pratiques
+            multiples<br><small>Marie, Zafira, Carlos</small></span>
+        </div>
+        <div class="event">
+          <span class="time">18h00</span>
+          <span class="description">Une adelphité, de nombreux parcours – Le Countdown de l’unité dans la
+            diversité</span>
+        </div>
+        <div class="event">
+          <span class="time">19h00</span>
+          <span class="description">Fermeture de l'Espace Saint-Martin Saint-Martin</span>
+        </div>
+        <div class="event">
+          <span class="time">19h00 – 00h00</span>
+          <span class="description">Living Clean Party à l'Alcazar</span>
+          <p class="location"><a href="https://maps.app.goo.gl/HDyWE7sDHwGSYjcW9" target="_blank">62 Rue Mazarine, 75006
+              Paris</a></p>
+        </div>
+      </section>
+      }
     </div>
+    <br>
+    <br>
     <br>
     <br>
     <br>

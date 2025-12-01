@@ -1,5 +1,126 @@
 <div class="food-container" appResponsive>
+  <div class="language-switcher">
+    <button (click)="setLanguage('en')" [class.active]="language === 'en'">ENGLISH</button> |
+    <button (click)="setLanguage('fr')" [class.active]="language === 'fr'">FRANÇAIS</button>
+  </div>
   <div class="food-content">
-    <p>Yummy treats to come!</p>
+
+    <!-- English Version -->
+    @if (language === 'en') {
+    <h1>Food & Drinks</h1>
+    <ng-container>
+
+      <section class="menu-section">
+        <h3>Daily Essentials</h3>
+        <p>Available throughout the day in our cafeteria area:</p>
+        <ul>
+          <li>Homemade cakes <span class="note">(vegan & gluten-free options available)</span></li>
+          <li>Sweet snacks</li>
+          <li>Watermelon</li>
+          <li>Chips</li>
+          <li>Freshly brewed coffee & tea</li>
+          <li>Iced tea, Coca-Cola</li>
+          <li>Homemade lemonade</li>
+        </ul>
+      </section>
+
+      <section class="menu-section">
+        <h3>Friday</h3>
+        <p>From 18:00 — Light Dinner</p>
+        <ul>
+          <li>Jambon-beurre (Ham - pork or turkey & butter)</li>
+          <li>Houmous, Cumin marinated carrots & Cucumber (Vegan)</li>
+        </ul>
+      </section>
+
+      <section class="menu-section">
+        <h3>Saturday</h3>
+        <p>12:00 — Lunch Break</p>
+        <ul>
+          <li>Jambon-beurre (Ham - pork or turkey & butter)</li>
+          <li>Houmous, Cumin marinated carrots & Cucumber (Vegan)</li>
+        </ul>
+      </section>
+
+      <section class="menu-section">
+        <h3>Sunday</h3>
+        <p>Morning — Parisian Breakfast</p>
+        <ul>
+          <li>Fresh croissants</li>
+          <li>Selection of homemade cakes</li>
+          <li>Coffee & tea service</li>
+          <li>Juice</li>
+        </ul>
+
+        <p>1:00 — Lunch Break</p>
+        <ul>
+          <li>Lentil salad with feta, tomato, herbs & vinaigrette (Vegetarian)</li>
+          <li>Gazpacho with tomato, cucumber, red pepper & lemon (Chilled, Vegan)</li>
+          <li>Jambon-beurre (Ham - pork or turkey & butter)</li>
+          <li>Houmous, Cumin marinated carrots & Cucumber (Vegan)</li>
+        </ul>
+      </section>
+    </ng-container>
+    }
+
+    <!-- French Version -->
+    @if (language === 'fr') {
+    <ng-container>
+      <h1>Menu</h1>
+      <section class="menu-section">
+        <h3>Essentiels Quotidiens</h3>
+        <p>Disponible toute la journée dans notre cafétéria :</p>
+        <ul>
+          <li>Gâteaux maison <span class="note">(options véganes et sans gluten disponibles)</span></li>
+          <li>Snacks sucrés</li>
+          <li>Pastèque</li>
+          <li>Chips</li>
+          <li>Café et thé fraîchement préparés</li>
+          <li>Thé glacé, Coca-Cola</li>
+          <li>Limonade maison</li>
+        </ul>
+      </section>
+
+      <section class="menu-section">
+        <h3>Vendredi</h3>
+        <p>À partir de 18h — Dîner léger</p>
+        <ul>
+          <li>Jambon-beurre (Jambon - porc ou dinde, & beurre)</li>
+          <li>Houmous, carottes marinées au cumin & concombre (Végan)</li>
+        </ul>
+      </section>
+
+      <section class="menu-section">
+        <h3>Samedi</h3>
+        <p>12h00 — Pause déjeuner</p>
+        <ul>
+          <li>Jambon-beurre (Jambon - porc ou dinde & beurre)</li>
+          <li>Houmous, carottes marinées au cumin & concombre (Végan)</li>
+        </ul>
+      </section>
+
+      <section class="menu-section">
+        <h3>Dimanche</h3>
+        <p>Matin — Petit déjeuner parisien</p>
+        <ul>
+          <li>Croissants frais</li>
+          <li>Sélection de gâteaux maison</li>
+          <li>Service de café & thé</li>
+          <li>Jus de fruits</li>
+        </ul>
+
+        <p>13h00 — Pause déjeuner</p>
+        <ul>
+          <li>Salade de lentilles avec feta, tomate, herbes & vinaigrette (Végétarien)</li>
+          <li>Gaspacho avec tomate, concombre, poivron rouge & citron (Froid, Végan)</li>
+          <li>Jambon-beurre (Jambon - porc ou dinde & beurre)</li>
+          <li>Houmous, carottes marinées au cumin & concombre (Végan)</li>
+        </ul>
+      </section>
+    </ng-container>
+    }
+    <br>
+    <br>
+    <br>
   </div>
 </div>
